@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import {Table,CustomInput,Button} from 'reactstrap';
 
-const RowItem = (todo,toggleSelect,toggleComplete) => {
+const RowItem = ({todo,toggleSelect,toggleComplete}) => {
+    console.log(todo);
     return (
     <tr>
         <th scope="row">
@@ -14,8 +15,8 @@ const RowItem = (todo,toggleSelect,toggleComplete) => {
             onChange={() => toggleSelect(todo.id)}
             />
         </th>
-        <th>{todo.time}</th>
         <th>{todo.text}</th>
+        <th>{todo.time.toDateString()}</th>
 
         <th>
             <Button
@@ -36,7 +37,9 @@ RowItem.prototype={
 };
 
 
-const TableView = ({todos, toggleSelect, toggleComplete}) => (
+const TableView = ({todos, toggleSelect, toggleComplete}) => {
+    return(
+
     <Table>
         <thead>
             <tr>
@@ -60,7 +63,8 @@ const TableView = ({todos, toggleSelect, toggleComplete}) => (
         </tbody>
 
     </Table>
-);
+    );
+};
 
 TableView.prototype={
     todos: PropTypes.object.isRequired,

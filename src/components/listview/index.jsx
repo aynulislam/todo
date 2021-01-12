@@ -53,7 +53,7 @@ const ListView = ({todos, toggleSelect, toggleComplete}) => {
             ))}
         </ListGroup>
 
-    )
+    );
 
 };
 

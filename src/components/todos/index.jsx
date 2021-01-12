@@ -15,8 +15,8 @@ class Todos extends React.Component{
                 text: 'my first text',
                 description: 'this is first text description',
                 time: new Date(),
-                isComplete: false,
-                isSelect: false
+                isComplete: true,
+                isSelect: false,
             },
             {
                 id: '2',
@@ -24,7 +24,7 @@ class Todos extends React.Component{
                 description: 'this is second text description',
                 time: new Date(),
                 isComplete: true,
-                isSelect: false
+                isSelect: false,
             }            
         ]
     };    
